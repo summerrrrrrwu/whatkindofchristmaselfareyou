@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你是哪種聖誕可愛鬼?</title>
+    <link rel="stylesheet" href="question.css">
+    <script src="question2.js"></script>
+    <link rel="icon" href="image/header.jpg" type="image/jpg">
+</head>
+<body>
+    <div id="header">
+        <img src="image/header.jpg" alt="Header Image">
+        <div class="header-text">
+            <p>NTPU elves</p>
+            <p>warm your heart</p>
+			<p>你是哪種聖誕可愛鬼?</p>
+        </div>
+    </div>
+    <div id="quiz-container">
+        <div class="question">
+            <p id="introText"></p>
+            <div class="option option-1" style="opacity: 0;" onclick="recordAnswer(2, 'A')">
+                <span>A. 紅色</span>
+                <img src="image/question2a.png" alt="Option A Image" class="option-image">
+            </div>
+            <div class="option option-2" style="opacity: 0;" onclick="recordAnswer(2, 'B')">
+                <span>B. 綠色</span>
+                <img src="image/question2b.png" alt="Option B Image" class="option-image">
+            </div>
+            <div class="option option-3" style="opacity: 0;" onclick="recordAnswer(2, 'C')">
+                <span>C. 金色</span>
+                <img src="image/question2c.png" alt="Option C Image" class="option-image">
+            </div>
+            <div class="option option-4" style="opacity: 0;" onclick="recordAnswer(2, 'D')">
+                <span>D. 白色</span>
+                <img src="image/question2d.png" alt="Option D Image" class="option-image">
+            </div>
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

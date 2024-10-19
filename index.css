@@ -1,0 +1,163 @@
+/* Font declaration */
+@font-face {
+    font-family: 'Cubic';
+    src: url('fonts/Cubic_11_1.100_R.woff2') format('woff2'),
+         url('fonts/Cubic_11_1.100_R.woff') format('woff'),
+         url('fonts/Cubic_11_1.100_R.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Body styles */
+body {
+    font-family: 'Cubic', sans-serif; /* 使用自定义字体 */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+}
+
+/* Header styles */
+#header {
+    width: 90%;
+    max-width: 600px;
+    height: 75px;
+    padding: 20px;
+    background-color: #fffffb;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1000;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#header img {
+    max-width: 100%;
+    max-height: 50%;
+}
+
+.header-text {
+    margin-top: 0px;
+}
+
+.header-text p {
+    margin: 0;
+    font-size: 0.5em;
+}
+
+/* Quiz container styles */
+#quiz-container {
+    width: 90%;
+    max-width: 600px;
+    height: 100%;
+    padding: 20px;
+    background-image: url('image/forever.gif');
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    margin-top: 95px;
+}
+
+/* Question styles */
+.question {
+    height: 100%;
+    margin: 5px auto;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.question p {
+    position: relative;
+    z-index: 1; /* 确保文字在背景之上 */
+    background-color: #fffffb; /* 背景颜色 */
+    color: black; /* 文字颜色，根据需要调整 */
+    padding: 10px; /* 为了使背景更明显，你可以添加一些 padding */
+    border-radius: 20px 20px 20px 20px; /* 圆弧形底部的背景 */
+}
+
+/* Intro text styles */
+#introText {
+    font-size: 1em; /* Adjust the font size as needed */
+    white-space: normal;
+}
+
+/* Option hover effect */
+.option:hover {
+    background-image: linear-gradient(to right, rgba(240, 128, 128, 0.6), rgba(152, 251, 152, 0.6));
+}
+
+/* Options container styles */
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Option styles */
+.option {
+    background-color: #fffffb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% - 20px); /* 1/3 的寬度，並減去間距 */
+    max-width: 100%;
+    max-height: calc(33.33% - 20px); /* 1/3 的高度，並減去間距 */
+    margin: 10px auto; /* 調整這一行，使 option 在水平方向上置中 */
+    padding: 5px;
+    border: 1px solid #fffffb;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平方向居中 */
+}
+
+/* Option image styles */
+.option-image {
+    max-height: 75px; /* 设置最大高度为70像素 */
+    width: auto; /* 让图像宽度自适应容器 */
+    height: auto; /* 保持图像比例 */
+    margin-top: 5px; /* 与文字之间的距离 */
+}
+
+/* Result container styles */
+#result {
+    display: none;
+    /* 初始隐藏结果容器 */
+}
+
+/* Media query for larger screens */
+@media only screen and (min-width: 600px) {
+    #quiz-container {
+        width: 70%;
+        /* 大屏幕时的宽度 */
+    }
+    .options-container {
+        flex-wrap: nowrap;
+        /* 大屏幕时不换行 */
+    }
+}
+
+/* Transition image styles */
+#transitionImage {
+    transition: transform 6s ease-in-out;
+    /* 定义变换动画，可根据需要调整 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:
